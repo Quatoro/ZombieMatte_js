@@ -1,65 +1,62 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zombiespelet</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <h1>Zombiespelet</h1>
 
     <div id="startScreen">
-        <h2>Välkommen!</h2>
-        <label for="playerName">Skriv ditt namn:</label>
-        <input type="text" id="playerName" required>
-        
-        <h3>Välj räknesätt:</h3>
-        <select id="operation">
-            <option value="addition">Addition (+)</option>
-            <option value="subtraction">Subtraktion (-)</option>
-            <option value="multiplication">Multiplikation (×)</option>
-        </select>
-    
-        <div id="multiplicationSettings" style="display: none;">
-            <h3>Multiplikationsinställningar:</h3>
-            <label for="maxNumerator">Max täljare:</label>
-            <input type="number" id="maxNumerator" min="1" value="10">
-            <label for="maxDenominator">Max nämnare:</label>
-            <input type="number" id="maxDenominator" min="1" value="10">
-        </div>
-    
-        <button id="startGame">Starta spelet</button>
-    </div>
-    
-    <div id="gameScreen" style="display: none;">
-        <p id="welcomeText"></p>
+      <h2>Välkommen!</h2>
+      <label for="playerName">Skriv ditt namn:</label>
+      <input type="text" id="playerName" required />
 
-        <!-- Mattefrågor -->
-        <div>
-            <p id="formula"></p>
-            <input type="number" id="answerInput" placeholder="Skriv ditt svar här">
-            <button onclick="submitAnswer()">Skicka svar</button>
-            <p id="status"></p>
-        </div>
-    
-        <!-- Dörrar som användaren kan välja -->
-        <div id="doors">
-            <!-- Dörrknapparna kommer att genereras här -->
-        </div>
-        <div id="reset">
-            
-        </div>
+      <h3>Välj räknesätt:</h3>
+      <select id="operation">
+        <option value="addition">Addition (+)</option>
+        <option value="subtraction">Subtraktion (-)</option>
+        <option value="multiplication">Multiplikation (×)</option>
+      </select>
+
+      <div id="multiplicationSettings" style="display: none">
+        <h3>Multiplikationsinställningar:</h3>
+        <label for="maxNumerator">Max täljare:</label>
+        <input type="number" id="maxNumerator" min="1" value="10" />
+        <label for="maxDenominator">Max nämnare:</label>
+        <input type="number" id="maxDenominator" min="1" value="10" />
+      </div>
+
+      <button id="startGame">Starta spelet</button>
     </div>
 
-    
+    <div id="gameScreen" style="display: none">
+      <p id="welcomeText"></p>
 
+      <!-- Mattefrågor -->
+      <div>
+        <input
+          type="number"
+          id="answerInput"
+          placeholder="Skriv ditt svar här"
+        />
+        <button onclick="submitAnswer()">Skicka svar</button>
+        <p id="formula"></p>
+        <p id="status"></p>
+      </div>
+
+      <!-- Dörrar som användaren kan välja -->
+      <div id="doors">
+        <!-- Dörrknapparna kommer att genereras här -->
+      </div>
+      <div id="reset"></div>
+    </div>
 
     <!-- Statusmeddelande -->
     <p id="status"></p>
 
-    
     <script src="zombieGame.js"></script>
-</body>
+  </body>
 </html>

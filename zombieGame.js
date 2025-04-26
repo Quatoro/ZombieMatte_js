@@ -83,6 +83,7 @@ function inaktiveraDörrar() {
 
 // Funktion för att kontrollera användarens svar på mattefrågan
 function submitAnswer() {
+  document.getElementById("formula").innerText = "";
   const userAnswer = parseInt(document.getElementById("answerInput").value, 10);
   const status = document.getElementById("status");
   document.getElementById("doors").style.display = "block";
