@@ -1,0 +1,6 @@
+
+
+1. Om man gissar fel är spelet slut.
+2. Om man hittar Zombien är spelet slut.
+3. För varje gång man klarar sig och inte hittar zombien tas en dörr bort.
+4. Spelet slutar när alla dörrar är borttagna utom en.

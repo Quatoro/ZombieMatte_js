@@ -1,0 +1,162 @@
+/* Återställ grundläggande standardvärden */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Ge spelet en snygg bakgrund */
+body {
+  background: linear-gradient(135deg, #2c3e50, #4ca1af);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Titel och instruktioner */
+h1 {
+  font-size: 32px;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  padding: 10px;
+}
+
+h3 {
+  padding: 10px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Dörrknappar */
+#doors {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.door {
+  margin-top: 25px;
+  margin-left: 12px;
+  width: 80px;
+  height: 150px;
+  background: linear-gradient(to bottom, #8b4513, #a0522d);
+  border: 4px solid #5d3a1a;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 150px;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Dörrhandtag */
+.door::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: gold;
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Hover-effekt när man håller musen över dörren */
+.door:hover {
+  background: linear-gradient(to bottom, #a0522d, #8b4513);
+  transform: scale(1.05);
+}
+
+/* Dörrens klick-effekt */
+.door:active {
+  transform: scale(0.95);
+}
+
+/* Statusmeddelanden */
+#status {
+  font-size: 20px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Mattefråga och input */
+#formula {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 3rem;
+  display: block;
+  background-color: #171d20;
+}
+
+#answerInput {
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* Omstartsknappen */
+#restartButton {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 22px;
+  background-color: #db3f34;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#restartButton:hover {
+  background-color: #b31010;
+}
+
+#reset {
+  display: flex;
+  justify-content: center;
+}
+
+/* Gör spelet responsivt */
+@media (max-width: 600px) {
+  .door {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+}
